@@ -20,7 +20,7 @@ namespace CommunicationIdentity {
 
     @post
     @route("/{id}/:issueAccessToken")
-    op issueAccessToken(@path id: CommunicationUserIdentifier): void;
+    op getToken(@path id: CommunicationUserIdentifier): void;
 
     @post
     @route("/{id}")
