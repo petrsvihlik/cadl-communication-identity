@@ -356,7 +356,7 @@
      "HttpMethod": "POST",
      "RequestBodyMediaType": "Json",
      "Uri": "{host}",
-     "Path": "/identities",
+     "Path": "/",
      "RequestMediaTypes": [
       "application/json"
      ],
@@ -678,7 +678,7 @@
      "HttpMethod": "POST",
      "RequestBodyMediaType": "Json",
      "Uri": "{host}",
-     "Path": "/identities/teamsUser/:exchangeAccessToken",
+     "Path": "/teamsUser/:exchangeAccessToken",
      "RequestMediaTypes": [
       "application/json"
      ],

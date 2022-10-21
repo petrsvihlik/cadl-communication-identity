@@ -510,7 +510,7 @@ namespace CommunicationIdentity
             request.Method = RequestMethod.Post;
             var uri = new RawRequestUriBuilder();
             uri.Reset(_endpoint);
-            uri.AppendPath("/identities", false);
+            uri.AppendPath("/", false);
             uri.AppendQuery("api-version", _apiVersion, true);
             request.Uri = uri;
             request.Headers.Add("Accept", "application/json");
@@ -573,7 +573,7 @@ namespace CommunicationIdentity
             request.Method = RequestMethod.Post;
             var uri = new RawRequestUriBuilder();
             uri.Reset(_endpoint);
-            uri.AppendPath("/identities/teamsUser/:exchangeAccessToken", false);
+            uri.AppendPath("/teamsUser/:exchangeAccessToken", false);
             uri.AppendQuery("api-version", _apiVersion, true);
             request.Uri = uri;
             request.Headers.Add("Accept", "application/json");

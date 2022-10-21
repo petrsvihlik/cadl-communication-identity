@@ -7,7 +7,6 @@ using Cadl.Http;
     version: "2022-10-01",
 })
 @server("https://example.com", "Single server endpoint")
-@route("/identities")
 namespace CommunicationIdentity {
     @post
     op createUserAndToken(
@@ -15,15 +14,15 @@ namespace CommunicationIdentity {
     ): CommunicationUserIdentifierAndToken;
 
     @post
-    @route("/{id}/:revokeAccessTokens")
+    @route("/identities/{id}/:revokeAccessTokens")
     op revoke(@path id: CommunicationUserIdentifier): void;
 
     @post
-    @route("/{id}/:issueAccessToken")
+    @route("/identities/{id}/:issueAccessToken")
     op getToken(@path id: CommunicationUserIdentifier): void;
 
     @post
-    @route("/{id}")
+    @route("/identities/{id}")
     op delete(@path id: CommunicationUserIdentifier): void;
 
     @post

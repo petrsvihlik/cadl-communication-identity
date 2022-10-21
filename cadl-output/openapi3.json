@@ -6,7 +6,7 @@
   },
   "tags": [],
   "paths": {
-    "/identities": {
+    "/": {
       "post": {
         "operationId": "createUserAndToken",
         "parameters": [],
@@ -117,7 +117,7 @@
         }
       }
     },
-    "/identities/teamsUser/:exchangeAccessToken": {
+    "/teamsUser/:exchangeAccessToken": {
       "post": {
         "operationId": "exchangeAccessToken",
         "parameters": [],
