@@ -8,7 +8,7 @@ export interface CommunicationIdentityCreateUserAndTokenBodyParam {
 export type CommunicationIdentityCreateUserAndTokenParameters =
   CommunicationIdentityCreateUserAndTokenBodyParam & RequestParameters;
 export type CommunicationIdentityRevokeParameters = RequestParameters;
-export type CommunicationIdentityIssueAccessTokenParameters = RequestParameters;
+export type CommunicationIdentityGetTokenParameters = RequestParameters;
 export type CommunicationIdentityDeleteParameters = RequestParameters;
 
 export interface CommunicationIdentityExchangeAccessTokenBodyParam {

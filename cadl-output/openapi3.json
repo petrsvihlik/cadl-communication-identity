@@ -63,7 +63,7 @@
     },
     "/identities/{id}/:issueAccessToken": {
       "post": {
-        "operationId": "issueAccessToken",
+        "operationId": "getToken",
         "parameters": [
           {
             "name": "id",

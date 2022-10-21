@@ -438,7 +438,7 @@
     },
     {
      "$id": "50",
-     "Name": "issueAccessToken",
+     "Name": "getToken",
      "Parameters": [
       {
        "$ref": "28"

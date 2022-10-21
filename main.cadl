@@ -26,7 +26,6 @@ namespace CommunicationIdentity {
     @route("/{id}")
     op delete(@path id: CommunicationUserIdentifier): void;
 
-    
     @post
     @route("/teamsUser/:exchangeAccessToken")
     op exchangeAccessToken(@body request: ExchangeAccessTokenRequest): void;
@@ -37,7 +36,7 @@ model CommunicationUserIdentifierAndToken {
     token: AccessToken;
 }
 
-model ExchangeAccessTokenRequest{
+model ExchangeAccessTokenRequest {
     appId: string;
     token: string;
     userId: string;
@@ -57,8 +56,4 @@ model CreateTokenWithScopes {
     @minValue(60)
     @maxValue(1440)
     expiresInMinutes?: int32;
-}
-
-model Scopes {
-    scope: string;
 }

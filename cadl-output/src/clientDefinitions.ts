@@ -1,14 +1,14 @@
 import {
   CommunicationIdentityCreateUserAndTokenParameters,
   CommunicationIdentityRevokeParameters,
-  CommunicationIdentityIssueAccessTokenParameters,
+  CommunicationIdentityGetTokenParameters,
   CommunicationIdentityDeleteParameters,
   CommunicationIdentityExchangeAccessTokenParameters,
 } from "./parameters";
 import {
   CommunicationIdentityCreateUserAndToken200Response,
   CommunicationIdentityRevoke204Response,
-  CommunicationIdentityIssueAccessToken204Response,
+  CommunicationIdentityGetToken204Response,
   CommunicationIdentityDelete204Response,
   CommunicationIdentityExchangeAccessToken204Response,
 } from "./responses";
@@ -26,10 +26,10 @@ export interface Revoke {
   ): StreamableMethod<CommunicationIdentityRevoke204Response>;
 }
 
-export interface IssueAccessToken {
+export interface GetToken {
   post(
-    options?: CommunicationIdentityIssueAccessTokenParameters
-  ): StreamableMethod<CommunicationIdentityIssueAccessToken204Response>;
+    options?: CommunicationIdentityGetTokenParameters
+  ): StreamableMethod<CommunicationIdentityGetToken204Response>;
 }
 
 export interface Delete {
@@ -50,7 +50,7 @@ export interface Routes {
   /** Resource for '/identities/\{id\}/:revokeAccessTokens' has methods for the following verbs: post */
   (path: "/identities/{id}/:revokeAccessTokens", id: object): Revoke;
   /** Resource for '/identities/\{id\}/:issueAccessToken' has methods for the following verbs: post */
-  (path: "/identities/{id}/:issueAccessToken", id: object): IssueAccessToken;
+  (path: "/identities/{id}/:issueAccessToken", id: object): GetToken;
   /** Resource for '/identities/\{id\}' has methods for the following verbs: post */
   (path: "/identities/{id}", id: object): Delete;
   /** Resource for '/identities/teamsUser/:exchangeAccessToken' has methods for the following verbs: post */

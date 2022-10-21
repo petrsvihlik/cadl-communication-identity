@@ -277,23 +277,23 @@ namespace CommunicationIdentity
         /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
         /// <returns> The response returned from the service. </returns>
         /// <example>
-        /// This sample shows how to call IssueAccessTokenAsync with required parameters.
+        /// This sample shows how to call GetTokenAsync with required parameters.
         /// <code><![CDATA[
         /// var client = new CommunicationIdentityClient();
         /// 
-        /// Response response = await client.IssueAccessTokenAsync(null);
+        /// Response response = await client.GetTokenAsync(null);
         /// Console.WriteLine(response.Status);
         /// ]]></code>
         /// </example>
-        public virtual async Task<Response> IssueAccessTokenAsync(object id, RequestContext context = null)
+        public virtual async Task<Response> GetTokenAsync(object id, RequestContext context = null)
         {
             Argument.AssertNotNull(id, nameof(id));
 
-            using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.IssueAccessToken");
+            using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.GetToken");
             scope.Start();
             try
             {
-                using HttpMessage message = CreateIssueAccessTokenRequest(id, context);
+                using HttpMessage message = CreateGetTokenRequest(id, context);
                 return await _pipeline.ProcessMessageAsync(message, context).ConfigureAwait(false);
             }
             catch (Exception e)
@@ -309,23 +309,23 @@ namespace CommunicationIdentity
         /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
         /// <returns> The response returned from the service. </returns>
         /// <example>
-        /// This sample shows how to call IssueAccessToken with required parameters.
+        /// This sample shows how to call GetToken with required parameters.
         /// <code><![CDATA[
         /// var client = new CommunicationIdentityClient();
         /// 
-        /// Response response = client.IssueAccessToken(null);
+        /// Response response = client.GetToken(null);
         /// Console.WriteLine(response.Status);
         /// ]]></code>
         /// </example>
-        public virtual Response IssueAccessToken(object id, RequestContext context = null)
+        public virtual Response GetToken(object id, RequestContext context = null)
         {
             Argument.AssertNotNull(id, nameof(id));
 
-            using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.IssueAccessToken");
+            using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.GetToken");
             scope.Start();
             try
             {
-                using HttpMessage message = CreateIssueAccessTokenRequest(id, context);
+                using HttpMessage message = CreateGetTokenRequest(id, context);
                 return _pipeline.ProcessMessage(message, context);
             }
             catch (Exception e)
@@ -535,7 +535,7 @@ namespace CommunicationIdentity
             return message;
         }
 
-        internal HttpMessage CreateIssueAccessTokenRequest(object id, RequestContext context)
+        internal HttpMessage CreateGetTokenRequest(object id, RequestContext context)
         {
             var message = _pipeline.CreateMessage(context, ResponseClassifier204);
             var request = message.Request;
