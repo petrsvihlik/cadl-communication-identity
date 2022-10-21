@@ -10,12 +10,26 @@ using Cadl.Http;
 @route("/identities")
 namespace CommunicationIdentity {
     @post
-    op createUserAndToken(): CommunicationUserIdentifierAndToken;
+    op createUserAndToken(
+        @body scopes?: CreateTokenWithScopes
+    ): CommunicationUserIdentifierAndToken;
+
+    @post
+    @route("/{id}/:revokeAccessTokens")
+    op revoke(@path id: CommunicationUserIdentifier): void;
+
+    @post
+    @route("/{id}/:issueAccessToken")
+    op issueAccessToken(@path id: CommunicationUserIdentifier): void;
 
     @post
     @route("/{id}")
-    op revoke(@path id: CommunicationUserIdentifier): void;
     op delete(@path id: CommunicationUserIdentifier): void;
+
+    
+    @post
+    @route("/teamsUser/:exchangeAccessToken")
+    op exchangeAccessToken(@body request: ExchangeAccessTokenRequest): void;
 }
 
 model CommunicationUserIdentifierAndToken {
@@ -23,6 +37,11 @@ model CommunicationUserIdentifierAndToken {
     token: AccessToken;
 }
 
+model ExchangeAccessTokenRequest{
+    appId: string;
+    token: string;
+    userId: string;
+}
 model CommunicationUserIdentifier {
     id: string;
 }
@@ -32,6 +51,13 @@ model AccessToken {
     expiresOn: plainDate;
 }
 
+model CreateTokenWithScopes {
+    createTokenWithScopes?: string[];
+
+    @minValue(60)
+    @maxValue(1440)
+    expiresInMinutes?: int32;
+}
 
 model Scopes {
     scope: string;

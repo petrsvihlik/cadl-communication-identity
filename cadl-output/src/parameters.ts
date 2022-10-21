@@ -1,6 +1,19 @@
 import { RequestParameters } from "@azure-rest/core-client";
+import { CreateTokenWithScopes, ExchangeAccessTokenRequest } from "./models";
+
+export interface CommunicationIdentityCreateUserAndTokenBodyParam {
+  body?: CreateTokenWithScopes;
+}
 
 export type CommunicationIdentityCreateUserAndTokenParameters =
-  RequestParameters;
+  CommunicationIdentityCreateUserAndTokenBodyParam & RequestParameters;
 export type CommunicationIdentityRevokeParameters = RequestParameters;
+export type CommunicationIdentityIssueAccessTokenParameters = RequestParameters;
 export type CommunicationIdentityDeleteParameters = RequestParameters;
+
+export interface CommunicationIdentityExchangeAccessTokenBodyParam {
+  body: ExchangeAccessTokenRequest;
+}
+
+export type CommunicationIdentityExchangeAccessTokenParameters =
+  CommunicationIdentityExchangeAccessTokenBodyParam & RequestParameters;

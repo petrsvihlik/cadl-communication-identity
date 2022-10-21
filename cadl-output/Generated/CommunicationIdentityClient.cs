@@ -47,6 +47,7 @@ namespace CommunicationIdentity
             _apiVersion = options.Version;
         }
 
+        /// <param name="content"> The content to send as the body of the request. Details of the request body schema are in the Remarks section below. </param>
         /// <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
         /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
         /// <returns> The response returned from the service. Details of the response body schema are in the Remarks section below. </returns>
@@ -55,7 +56,27 @@ namespace CommunicationIdentity
         /// <code><![CDATA[
         /// var client = new CommunicationIdentityClient();
         /// 
-        /// Response response = await client.CreateUserAndTokenAsync();
+        /// var data = new {};
+        /// 
+        /// Response response = await client.CreateUserAndTokenAsync(RequestContent.Create(data));
+        /// 
+        /// JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
+        /// Console.WriteLine(result.GetProperty("user").GetProperty("id").ToString());
+        /// Console.WriteLine(result.GetProperty("token").GetProperty("token").ToString());
+        /// Console.WriteLine(result.GetProperty("token").GetProperty("expiresOn").ToString());
+        /// ]]></code>
+        /// This sample shows how to call CreateUserAndTokenAsync with all request content, and how to parse the result.
+        /// <code><![CDATA[
+        /// var client = new CommunicationIdentityClient();
+        /// 
+        /// var data = new {
+        ///     createTokenWithScopes = new[] {
+        ///         "<String>"
+        ///     },
+        ///     expiresInMinutes = 1234,
+        /// };
+        /// 
+        /// Response response = await client.CreateUserAndTokenAsync(RequestContent.Create(data));
         /// 
         /// JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
         /// Console.WriteLine(result.GetProperty("user").GetProperty("id").ToString());
@@ -64,7 +85,16 @@ namespace CommunicationIdentity
         /// ]]></code>
         /// </example>
         /// <remarks>
-        /// Below is the JSON schema for the response payload.
+        /// Below is the JSON schema for the request and response payloads.
+        /// 
+        /// Request Body:
+        /// 
+        /// Schema for <c>CreateTokenWithScopes</c>:
+        /// <code>{
+        ///   createTokenWithScopes: [string], # Optional.
+        ///   expiresInMinutes: number, # Optional.
+        /// }
+        /// </code>
         /// 
         /// Response Body:
         /// 
@@ -81,13 +111,13 @@ namespace CommunicationIdentity
         /// </code>
         /// 
         /// </remarks>
-        public virtual async Task<Response> CreateUserAndTokenAsync(RequestContext context = null)
+        public virtual async Task<Response> CreateUserAndTokenAsync(RequestContent content, RequestContext context = null)
         {
             using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.CreateUserAndToken");
             scope.Start();
             try
             {
-                using HttpMessage message = CreateCreateUserAndTokenRequest(context);
+                using HttpMessage message = CreateCreateUserAndTokenRequest(content, context);
                 return await _pipeline.ProcessMessageAsync(message, context).ConfigureAwait(false);
             }
             catch (Exception e)
@@ -97,6 +127,7 @@ namespace CommunicationIdentity
             }
         }
 
+        /// <param name="content"> The content to send as the body of the request. Details of the request body schema are in the Remarks section below. </param>
         /// <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
         /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
         /// <returns> The response returned from the service. Details of the response body schema are in the Remarks section below. </returns>
@@ -105,7 +136,27 @@ namespace CommunicationIdentity
         /// <code><![CDATA[
         /// var client = new CommunicationIdentityClient();
         /// 
-        /// Response response = client.CreateUserAndToken();
+        /// var data = new {};
+        /// 
+        /// Response response = client.CreateUserAndToken(RequestContent.Create(data));
+        /// 
+        /// JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
+        /// Console.WriteLine(result.GetProperty("user").GetProperty("id").ToString());
+        /// Console.WriteLine(result.GetProperty("token").GetProperty("token").ToString());
+        /// Console.WriteLine(result.GetProperty("token").GetProperty("expiresOn").ToString());
+        /// ]]></code>
+        /// This sample shows how to call CreateUserAndToken with all request content, and how to parse the result.
+        /// <code><![CDATA[
+        /// var client = new CommunicationIdentityClient();
+        /// 
+        /// var data = new {
+        ///     createTokenWithScopes = new[] {
+        ///         "<String>"
+        ///     },
+        ///     expiresInMinutes = 1234,
+        /// };
+        /// 
+        /// Response response = client.CreateUserAndToken(RequestContent.Create(data));
         /// 
         /// JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
         /// Console.WriteLine(result.GetProperty("user").GetProperty("id").ToString());
@@ -114,7 +165,16 @@ namespace CommunicationIdentity
         /// ]]></code>
         /// </example>
         /// <remarks>
-        /// Below is the JSON schema for the response payload.
+        /// Below is the JSON schema for the request and response payloads.
+        /// 
+        /// Request Body:
+        /// 
+        /// Schema for <c>CreateTokenWithScopes</c>:
+        /// <code>{
+        ///   createTokenWithScopes: [string], # Optional.
+        ///   expiresInMinutes: number, # Optional.
+        /// }
+        /// </code>
         /// 
         /// Response Body:
         /// 
@@ -131,13 +191,13 @@ namespace CommunicationIdentity
         /// </code>
         /// 
         /// </remarks>
-        public virtual Response CreateUserAndToken(RequestContext context = null)
+        public virtual Response CreateUserAndToken(RequestContent content, RequestContext context = null)
         {
             using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.CreateUserAndToken");
             scope.Start();
             try
             {
-                using HttpMessage message = CreateCreateUserAndTokenRequest(context);
+                using HttpMessage message = CreateCreateUserAndTokenRequest(content, context);
                 return _pipeline.ProcessMessage(message, context);
             }
             catch (Exception e)
@@ -217,6 +277,70 @@ namespace CommunicationIdentity
         /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
         /// <returns> The response returned from the service. </returns>
         /// <example>
+        /// This sample shows how to call IssueAccessTokenAsync with required parameters.
+        /// <code><![CDATA[
+        /// var client = new CommunicationIdentityClient();
+        /// 
+        /// Response response = await client.IssueAccessTokenAsync(null);
+        /// Console.WriteLine(response.Status);
+        /// ]]></code>
+        /// </example>
+        public virtual async Task<Response> IssueAccessTokenAsync(object id, RequestContext context = null)
+        {
+            Argument.AssertNotNull(id, nameof(id));
+
+            using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.IssueAccessToken");
+            scope.Start();
+            try
+            {
+                using HttpMessage message = CreateIssueAccessTokenRequest(id, context);
+                return await _pipeline.ProcessMessageAsync(message, context).ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                scope.Failed(e);
+                throw;
+            }
+        }
+
+        /// <param name="id"> The CommunicationUserIdentifier to use. </param>
+        /// <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        /// <exception cref="ArgumentNullException"> <paramref name="id"/> is null. </exception>
+        /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
+        /// <returns> The response returned from the service. </returns>
+        /// <example>
+        /// This sample shows how to call IssueAccessToken with required parameters.
+        /// <code><![CDATA[
+        /// var client = new CommunicationIdentityClient();
+        /// 
+        /// Response response = client.IssueAccessToken(null);
+        /// Console.WriteLine(response.Status);
+        /// ]]></code>
+        /// </example>
+        public virtual Response IssueAccessToken(object id, RequestContext context = null)
+        {
+            Argument.AssertNotNull(id, nameof(id));
+
+            using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.IssueAccessToken");
+            scope.Start();
+            try
+            {
+                using HttpMessage message = CreateIssueAccessTokenRequest(id, context);
+                return _pipeline.ProcessMessage(message, context);
+            }
+            catch (Exception e)
+            {
+                scope.Failed(e);
+                throw;
+            }
+        }
+
+        /// <param name="id"> The CommunicationUserIdentifier to use. </param>
+        /// <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        /// <exception cref="ArgumentNullException"> <paramref name="id"/> is null. </exception>
+        /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
+        /// <returns> The response returned from the service. </returns>
+        /// <example>
         /// This sample shows how to call DeleteAsync with required parameters.
         /// <code><![CDATA[
         /// var client = new CommunicationIdentityClient();
@@ -275,7 +399,111 @@ namespace CommunicationIdentity
             }
         }
 
-        internal HttpMessage CreateCreateUserAndTokenRequest(RequestContext context)
+        /// <param name="content"> The content to send as the body of the request. Details of the request body schema are in the Remarks section below. </param>
+        /// <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        /// <exception cref="ArgumentNullException"> <paramref name="content"/> is null. </exception>
+        /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
+        /// <returns> The response returned from the service. </returns>
+        /// <example>
+        /// This sample shows how to call ExchangeAccessTokenAsync with required request content.
+        /// <code><![CDATA[
+        /// var client = new CommunicationIdentityClient();
+        /// 
+        /// var data = new {
+        ///     appId = "<appId>",
+        ///     token = "<token>",
+        ///     userId = "<userId>",
+        /// };
+        /// 
+        /// Response response = await client.ExchangeAccessTokenAsync(RequestContent.Create(data));
+        /// Console.WriteLine(response.Status);
+        /// ]]></code>
+        /// </example>
+        /// <remarks>
+        /// Below is the JSON schema for the request payload.
+        /// 
+        /// Request Body:
+        /// 
+        /// Schema for <c>ExchangeAccessTokenRequest</c>:
+        /// <code>{
+        ///   appId: string, # Required.
+        ///   token: string, # Required.
+        ///   userId: string, # Required.
+        /// }
+        /// </code>
+        /// 
+        /// </remarks>
+        public virtual async Task<Response> ExchangeAccessTokenAsync(RequestContent content, RequestContext context = null)
+        {
+            Argument.AssertNotNull(content, nameof(content));
+
+            using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.ExchangeAccessToken");
+            scope.Start();
+            try
+            {
+                using HttpMessage message = CreateExchangeAccessTokenRequest(content, context);
+                return await _pipeline.ProcessMessageAsync(message, context).ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                scope.Failed(e);
+                throw;
+            }
+        }
+
+        /// <param name="content"> The content to send as the body of the request. Details of the request body schema are in the Remarks section below. </param>
+        /// <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        /// <exception cref="ArgumentNullException"> <paramref name="content"/> is null. </exception>
+        /// <exception cref="RequestFailedException"> Service returned a non-success status code. </exception>
+        /// <returns> The response returned from the service. </returns>
+        /// <example>
+        /// This sample shows how to call ExchangeAccessToken with required request content.
+        /// <code><![CDATA[
+        /// var client = new CommunicationIdentityClient();
+        /// 
+        /// var data = new {
+        ///     appId = "<appId>",
+        ///     token = "<token>",
+        ///     userId = "<userId>",
+        /// };
+        /// 
+        /// Response response = client.ExchangeAccessToken(RequestContent.Create(data));
+        /// Console.WriteLine(response.Status);
+        /// ]]></code>
+        /// </example>
+        /// <remarks>
+        /// Below is the JSON schema for the request payload.
+        /// 
+        /// Request Body:
+        /// 
+        /// Schema for <c>ExchangeAccessTokenRequest</c>:
+        /// <code>{
+        ///   appId: string, # Required.
+        ///   token: string, # Required.
+        ///   userId: string, # Required.
+        /// }
+        /// </code>
+        /// 
+        /// </remarks>
+        public virtual Response ExchangeAccessToken(RequestContent content, RequestContext context = null)
+        {
+            Argument.AssertNotNull(content, nameof(content));
+
+            using var scope = ClientDiagnostics.CreateScope("CommunicationIdentityClient.ExchangeAccessToken");
+            scope.Start();
+            try
+            {
+                using HttpMessage message = CreateExchangeAccessTokenRequest(content, context);
+                return _pipeline.ProcessMessage(message, context);
+            }
+            catch (Exception e)
+            {
+                scope.Failed(e);
+                throw;
+            }
+        }
+
+        internal HttpMessage CreateCreateUserAndTokenRequest(RequestContent content, RequestContext context)
         {
             var message = _pipeline.CreateMessage(context, ResponseClassifier200);
             var request = message.Request;
@@ -286,6 +514,8 @@ namespace CommunicationIdentity
             uri.AppendQuery("api-version", _apiVersion, true);
             request.Uri = uri;
             request.Headers.Add("Accept", "application/json");
+            request.Headers.Add("Content-Type", "application/json");
+            request.Content = content;
             return message;
         }
 
@@ -298,6 +528,23 @@ namespace CommunicationIdentity
             uri.Reset(_endpoint);
             uri.AppendPath("/identities/", false);
             uri.AppendPath(id, true);
+            uri.AppendPath("/:revokeAccessTokens", false);
+            uri.AppendQuery("api-version", _apiVersion, true);
+            request.Uri = uri;
+            request.Headers.Add("Accept", "application/json");
+            return message;
+        }
+
+        internal HttpMessage CreateIssueAccessTokenRequest(object id, RequestContext context)
+        {
+            var message = _pipeline.CreateMessage(context, ResponseClassifier204);
+            var request = message.Request;
+            request.Method = RequestMethod.Post;
+            var uri = new RawRequestUriBuilder();
+            uri.Reset(_endpoint);
+            uri.AppendPath("/identities/", false);
+            uri.AppendPath(id, true);
+            uri.AppendPath("/:issueAccessToken", false);
             uri.AppendQuery("api-version", _apiVersion, true);
             request.Uri = uri;
             request.Headers.Add("Accept", "application/json");
@@ -308,7 +555,7 @@ namespace CommunicationIdentity
         {
             var message = _pipeline.CreateMessage(context, ResponseClassifier204);
             var request = message.Request;
-            request.Method = RequestMethod.Get;
+            request.Method = RequestMethod.Post;
             var uri = new RawRequestUriBuilder();
             uri.Reset(_endpoint);
             uri.AppendPath("/identities/", false);
@@ -316,6 +563,22 @@ namespace CommunicationIdentity
             uri.AppendQuery("api-version", _apiVersion, true);
             request.Uri = uri;
             request.Headers.Add("Accept", "application/json");
+            return message;
+        }
+
+        internal HttpMessage CreateExchangeAccessTokenRequest(RequestContent content, RequestContext context)
+        {
+            var message = _pipeline.CreateMessage(context, ResponseClassifier204);
+            var request = message.Request;
+            request.Method = RequestMethod.Post;
+            var uri = new RawRequestUriBuilder();
+            uri.Reset(_endpoint);
+            uri.AppendPath("/identities/teamsUser/:exchangeAccessToken", false);
+            uri.AppendQuery("api-version", _apiVersion, true);
+            request.Uri = uri;
+            request.Headers.Add("Accept", "application/json");
+            request.Headers.Add("Content-Type", "application/json");
+            request.Content = content;
             return message;
         }
 

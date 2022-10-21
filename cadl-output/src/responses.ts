@@ -14,6 +14,18 @@ export interface CommunicationIdentityRevoke204Response extends HttpResponse {
 }
 
 /** There is no content to send for this request, but the headers may be useful. */
+export interface CommunicationIdentityIssueAccessToken204Response
+  extends HttpResponse {
+  status: "204";
+}
+
+/** There is no content to send for this request, but the headers may be useful. */
 export interface CommunicationIdentityDelete204Response extends HttpResponse {
+  status: "204";
+}
+
+/** There is no content to send for this request, but the headers may be useful. */
+export interface CommunicationIdentityExchangeAccessToken204Response
+  extends HttpResponse {
   status: "204";
 }

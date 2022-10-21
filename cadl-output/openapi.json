@@ -21,10 +21,19 @@
               }
             }
           }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTokenWithScopes"
+              }
+            }
+          }
         }
       }
     },
-    "/identities/{id}": {
+    "/identities/{id}/:revokeAccessTokens": {
       "post": {
         "operationId": "revoke",
         "parameters": [
@@ -50,8 +59,38 @@
             "description": "There is no content to send for this request, but the headers may be useful. "
           }
         }
-      },
-      "get": {
+      }
+    },
+    "/identities/{id}/:issueAccessToken": {
+      "post": {
+        "operationId": "issueAccessToken",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "There is no content to send for this request, but the headers may be useful. "
+          }
+        }
+      }
+    },
+    "/identities/{id}": {
+      "post": {
         "operationId": "delete",
         "parameters": [
           {
@@ -77,10 +116,48 @@
           }
         }
       }
+    },
+    "/identities/teamsUser/:exchangeAccessToken": {
+      "post": {
+        "operationId": "exchangeAccessToken",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "There is no content to send for this request, but the headers may be useful. "
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExchangeAccessTokenRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "CreateTokenWithScopes": {
+        "type": "object",
+        "properties": {
+          "createTokenWithScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "x-cadl-name": "string[]"
+          },
+          "expiresInMinutes": {
+            "type": "integer",
+            "format": "int32",
+            "minimum": 60,
+            "maximum": 1440
+          }
+        }
+      },
       "CommunicationUserIdentifierAndToken": {
         "type": "object",
         "properties": {
@@ -94,6 +171,25 @@
         "required": [
           "user",
           "token"
+        ]
+      },
+      "ExchangeAccessTokenRequest": {
+        "type": "object",
+        "properties": {
+          "appId": {
+            "type": "string"
+          },
+          "token": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "appId",
+          "token",
+          "userId"
         ]
       },
       "CommunicationUserIdentifier": {
