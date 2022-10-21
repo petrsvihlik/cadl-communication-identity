@@ -1,0 +1,38 @@
+import "@cadl-lang/rest";
+
+using Cadl.Http;
+
+@service({
+    title: "Azure.Communication.Identity",
+    version: "2022-10-01",
+})
+@server("https://example.com", "Single server endpoint")
+@route("/identities")
+namespace CommunicationIdentity {
+    @post
+    op createUserAndToken(): CommunicationUserIdentifierAndToken;
+
+    @post
+    @route("/{id}")
+    op revoke(@path id: CommunicationUserIdentifier): void;
+    op delete(@path id: CommunicationUserIdentifier): void;
+}
+
+model CommunicationUserIdentifierAndToken {
+    user: CommunicationUserIdentifier;
+    token: AccessToken;
+}
+
+model CommunicationUserIdentifier {
+    id: string;
+}
+
+model AccessToken {
+    token: string;
+    expiresOn: plainDate;
+}
+
+
+model Scopes {
+    scope: string;
+}

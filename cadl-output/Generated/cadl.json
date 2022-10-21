@@ -1,0 +1,375 @@
+{
+ "$id": "1",
+ "Name": "CommunicationIdentity",
+ "ApiVersions": [
+  "2022-10-01"
+ ],
+ "Enums": [],
+ "Models": [
+  {
+   "$id": "2",
+   "Name": "CommunicationUserIdentifierAndToken",
+   "Namespace": "",
+   "IsNullable": false,
+   "Properties": [
+    {
+     "$id": "3",
+     "Name": "user",
+     "SerializedName": "user",
+     "Description": "",
+     "Type": {
+      "$id": "4",
+      "Name": "CommunicationUserIdentifier",
+      "Namespace": "",
+      "IsNullable": false,
+      "Properties": [
+       {
+        "$id": "5",
+        "Name": "id",
+        "SerializedName": "id",
+        "Description": "",
+        "Type": {
+         "$id": "6",
+         "Name": "string",
+         "Kind": "String",
+         "IsNullable": false
+        },
+        "IsRequired": true,
+        "IsReadOnly": false,
+        "IsDiscriminator": false
+       }
+      ]
+     },
+     "IsRequired": true,
+     "IsReadOnly": false,
+     "IsDiscriminator": false
+    },
+    {
+     "$id": "7",
+     "Name": "token",
+     "SerializedName": "token",
+     "Description": "",
+     "Type": {
+      "$id": "8",
+      "Name": "AccessToken",
+      "Namespace": "",
+      "IsNullable": false,
+      "Properties": [
+       {
+        "$id": "9",
+        "Name": "token",
+        "SerializedName": "token",
+        "Description": "",
+        "Type": {
+         "$id": "10",
+         "Name": "string",
+         "Kind": "String",
+         "IsNullable": false
+        },
+        "IsRequired": true,
+        "IsReadOnly": false,
+        "IsDiscriminator": false
+       },
+       {
+        "$id": "11",
+        "Name": "expiresOn",
+        "SerializedName": "expiresOn",
+        "Description": "",
+        "Type": {
+         "$id": "12",
+         "Name": "plainDate",
+         "Kind": "DateTime",
+         "IsNullable": false
+        },
+        "IsRequired": true,
+        "IsReadOnly": false,
+        "IsDiscriminator": false
+       }
+      ]
+     },
+     "IsRequired": true,
+     "IsReadOnly": false,
+     "IsDiscriminator": false
+    }
+   ]
+  },
+  {
+   "$ref": "4"
+  },
+  {
+   "$ref": "8"
+  }
+ ],
+ "Clients": [
+  {
+   "$id": "13",
+   "Name": "CommunicationIdentity",
+   "Operations": [
+    {
+     "$id": "14",
+     "Name": "createUserAndToken",
+     "Parameters": [
+      {
+       "$id": "15",
+       "Name": "host",
+       "NameInRequest": "host",
+       "Description": "Single server endpoint",
+       "Type": {
+        "$id": "16",
+        "Name": "String",
+        "Kind": "String",
+        "IsNullable": false
+       },
+       "Location": "Uri",
+       "IsApiVersion": false,
+       "IsResourceParameter": false,
+       "IsContentType": false,
+       "IsRequired": true,
+       "IsEndpoint": true,
+       "SkipUrlEncoding": false,
+       "Explode": false,
+       "Kind": "Client",
+       "DefaultValue": {
+        "$id": "17",
+        "Type": {
+         "$id": "18",
+         "Name": "String",
+         "Kind": "String",
+         "IsNullable": false
+        },
+        "Value": "https://example.com"
+       }
+      },
+      {
+       "$id": "19",
+       "Name": "accept",
+       "NameInRequest": "Accept",
+       "Type": {
+        "$id": "20",
+        "Name": "String",
+        "Kind": "String",
+        "IsNullable": false
+       },
+       "Location": "Header",
+       "IsApiVersion": false,
+       "IsResourceParameter": false,
+       "IsContentType": false,
+       "IsRequired": true,
+       "IsEndpoint": false,
+       "SkipUrlEncoding": false,
+       "Explode": false,
+       "Kind": "Constant",
+       "DefaultValue": {
+        "$id": "21",
+        "Type": {
+         "$ref": "20"
+        },
+        "Value": "application/json"
+       }
+      },
+      {
+       "$id": "22",
+       "Name": "apiVersion",
+       "NameInRequest": "api-version",
+       "Description": "",
+       "Type": {
+        "$id": "23",
+        "Name": "String",
+        "Kind": "String",
+        "IsNullable": false
+       },
+       "Location": "Query",
+       "IsRequired": true,
+       "IsApiVersion": true,
+       "IsContentType": false,
+       "IsEndpoint": false,
+       "IsResourceParameter": false,
+       "SkipUrlEncoding": false,
+       "Explode": false,
+       "Kind": "Client",
+       "DefaultValue": {
+        "$id": "24",
+        "Type": {
+         "$id": "25",
+         "Name": "String",
+         "Kind": "String",
+         "IsNullable": false
+        },
+        "Value": "2022-10-01"
+       }
+      }
+     ],
+     "Responses": [
+      {
+       "$id": "26",
+       "StatusCodes": [
+        200
+       ],
+       "BodyType": {
+        "$ref": "2"
+       },
+       "BodyMediaType": "Json",
+       "Headers": [],
+       "IsErrorResponse": false
+      }
+     ],
+     "HttpMethod": "POST",
+     "RequestBodyMediaType": "Json",
+     "Uri": "{host}",
+     "Path": "/identities",
+     "BufferResponse": true,
+     "GenerateConvenienceMethod": false
+    },
+    {
+     "$id": "27",
+     "Name": "revoke",
+     "Parameters": [
+      {
+       "$ref": "15"
+      },
+      {
+       "$id": "28",
+       "Name": "id",
+       "NameInRequest": "id",
+       "Type": {
+        "$ref": "4"
+       },
+       "Location": "Path",
+       "IsRequired": true,
+       "IsApiVersion": false,
+       "IsResourceParameter": false,
+       "IsContentType": false,
+       "IsEndpoint": false,
+       "SkipUrlEncoding": false,
+       "Explode": false,
+       "Kind": "Method"
+      },
+      {
+       "$id": "29",
+       "Name": "accept",
+       "NameInRequest": "Accept",
+       "Type": {
+        "$id": "30",
+        "Name": "String",
+        "Kind": "String",
+        "IsNullable": false
+       },
+       "Location": "Header",
+       "IsApiVersion": false,
+       "IsResourceParameter": false,
+       "IsContentType": false,
+       "IsRequired": true,
+       "IsEndpoint": false,
+       "SkipUrlEncoding": false,
+       "Explode": false,
+       "Kind": "Constant",
+       "DefaultValue": {
+        "$id": "31",
+        "Type": {
+         "$ref": "30"
+        },
+        "Value": "application/json"
+       }
+      },
+      {
+       "$ref": "22"
+      }
+     ],
+     "Responses": [
+      {
+       "$id": "32",
+       "StatusCodes": [
+        204
+       ],
+       "BodyMediaType": "Json",
+       "Headers": [],
+       "IsErrorResponse": false
+      }
+     ],
+     "HttpMethod": "POST",
+     "RequestBodyMediaType": "Json",
+     "Uri": "{host}",
+     "Path": "/identities/{id}",
+     "BufferResponse": true,
+     "GenerateConvenienceMethod": false
+    },
+    {
+     "$id": "33",
+     "Name": "delete",
+     "Parameters": [
+      {
+       "$ref": "15"
+      },
+      {
+       "$id": "34",
+       "Name": "id",
+       "NameInRequest": "id",
+       "Type": {
+        "$ref": "4"
+       },
+       "Location": "Path",
+       "IsRequired": true,
+       "IsApiVersion": false,
+       "IsResourceParameter": false,
+       "IsContentType": false,
+       "IsEndpoint": false,
+       "SkipUrlEncoding": false,
+       "Explode": false,
+       "Kind": "Method"
+      },
+      {
+       "$id": "35",
+       "Name": "accept",
+       "NameInRequest": "Accept",
+       "Type": {
+        "$id": "36",
+        "Name": "String",
+        "Kind": "String",
+        "IsNullable": false
+       },
+       "Location": "Header",
+       "IsApiVersion": false,
+       "IsResourceParameter": false,
+       "IsContentType": false,
+       "IsRequired": true,
+       "IsEndpoint": false,
+       "SkipUrlEncoding": false,
+       "Explode": false,
+       "Kind": "Constant",
+       "DefaultValue": {
+        "$id": "37",
+        "Type": {
+         "$ref": "36"
+        },
+        "Value": "application/json"
+       }
+      },
+      {
+       "$ref": "22"
+      }
+     ],
+     "Responses": [
+      {
+       "$id": "38",
+       "StatusCodes": [
+        204
+       ],
+       "BodyMediaType": "Json",
+       "Headers": [],
+       "IsErrorResponse": false
+      }
+     ],
+     "HttpMethod": "GET",
+     "RequestBodyMediaType": "Json",
+     "Uri": "{host}",
+     "Path": "/identities/{id}",
+     "BufferResponse": true,
+     "GenerateConvenienceMethod": false
+    }
+   ],
+   "Protocol": {
+    "$id": "39"
+   }
+  }
+ ]
+}

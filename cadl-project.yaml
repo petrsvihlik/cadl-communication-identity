@@ -1,0 +1,4 @@
+emitters:
+  '@cadl-lang/openapi3': true
+  '@azure-tools/cadl-csharp': true
+  '@azure-tools/cadl-typescript': true

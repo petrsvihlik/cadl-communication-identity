@@ -1,0 +1,12 @@
+{
+  "name": "cadl-identity",
+  "dependencies": {
+    "@cadl-lang/compiler": "latest",
+    "@cadl-lang/rest": "latest",
+    "@cadl-lang/openapi3": "latest",
+    "@azure-tools/cadl-autorest": "latest",
+    "@azure-tools/cadl-csharp": "latest",
+    "@azure-tools/cadl-typescript": "latest"
+  },
+  "private": true
+}
