@@ -1,12 +1,15 @@
 {
   "name": "cadl-identity",
   "dependencies": {
-    "@cadl-lang/compiler": "latest",
-    "@cadl-lang/rest": "latest",
+    "@cadl-lang/compiler": "0.35.0",
+    "@cadl-lang/rest": "0.17.0",
     "@cadl-lang/openapi3": "latest",
     "@azure-tools/cadl-autorest": "latest",
     "@azure-tools/cadl-csharp": "latest",
     "@azure-tools/cadl-typescript": "latest"
+  },
+  "scripts": {
+    "compile": "cadl compile --emit @azure-tools/cadl-csharp --output-path='./cadl-output/csharp' . & cadl compile --emit @azure-tools/cadl-typescript --output-path='./cadl-output/ts' ."
   },
   "private": true
 }

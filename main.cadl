@@ -2,10 +2,12 @@ import "@cadl-lang/rest";
 
 using Cadl.Http;
 
-@service({
-    title: "Azure.Communication.Identity",
-    version: "2022-10-01",
-})
+@serviceVersion("2022-10-01")
+@serviceTitle("Azure.Communication.Identity")
+// @service({
+//     title: "Azure.Communication.Identity",
+//     version: "2022-10-01",
+// })
 @server("https://example.com", "Single server endpoint")
 namespace CommunicationIdentity {
     @post
