@@ -17,3 +17,5 @@ resources:
 - https://microsoft.github.io/cadl/docs/standard-library/rest/resource-routing/
 - https://microsoft.github.io/cadl/docs/setup/installation/
 - https://github.com/microsoft/cadl/blob/main/docs/cadl-for-openapi-dev.md#parameter-object
+- https://github.com/Azure/cadl-azure
+- azure playground: https://cadlplayground.z22.web.core.windows.net/cadl-azure/
