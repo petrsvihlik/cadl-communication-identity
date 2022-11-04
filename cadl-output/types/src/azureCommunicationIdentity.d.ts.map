@@ -1,0 +1,1 @@
+{"version":3,"file":"azureCommunicationIdentity.d.ts","sourceRoot":"","sources":["../../src/azureCommunicationIdentity.ts"],"names":[],"mappings":"AAAA,OAAO,EAAa,aAAa,EAAE,MAAM,yBAAyB,CAAC;AACnE,OAAO,EAAE,gCAAgC,EAAE,MAAM,qBAAqB,CAAC;AAEvE;;;GAGG;AACH,MAAM,CAAC,OAAO,UAAU,YAAY,CAClC,OAAO,GAAE,aAAkB,GAC1B,gCAAgC,CA4ClC"}

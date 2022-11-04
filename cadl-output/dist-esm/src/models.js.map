@@ -1,0 +1,1 @@
+{"version":3,"file":"models.js","sourceRoot":"","sources":["../../src/models.ts"],"names":[],"mappings":"","sourcesContent":["export interface CreateTokenWithScopes {\n  createTokenWithScopes?: string[];\n  expiresInMinutes?: number;\n}\n\nexport interface ExchangeAccessTokenRequest {\n  appId: string;\n  token: string;\n  userId: string;\n}\n"]}

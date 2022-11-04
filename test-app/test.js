@@ -1,6 +1,6 @@
 
 
-const createClient = require("./azureCommunicationIdentity").default;
+const createClient = require("../cadl-output/dist/index");
 const { createCommunicationAuthPolicy, parseConnectionString } = require('@azure/communication-common');
 
 require('dotenv').config()

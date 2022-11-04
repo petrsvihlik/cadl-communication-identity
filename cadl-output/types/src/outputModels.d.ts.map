@@ -1,0 +1,1 @@
+{"version":3,"file":"outputModels.d.ts","sourceRoot":"","sources":["../../src/outputModels.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,yCAAyC;IACxD,IAAI,EAAE,iCAAiC,CAAC;IACxC,KAAK,EAAE,iBAAiB,CAAC;CAC1B;AAED,MAAM,WAAW,iCAAiC;IAChD,EAAE,EAAE,MAAM,CAAC;CACZ;AAED,MAAM,WAAW,iBAAiB;IAChC,KAAK,EAAE,MAAM,CAAC;IACd,SAAS,EAAE,MAAM,CAAC;CACnB"}
