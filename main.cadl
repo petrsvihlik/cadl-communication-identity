@@ -9,6 +9,7 @@ using Cadl.Http;
 @server("https://example.com", "Single server endpoint")
 namespace CommunicationIdentity {
     @post
+    @route("/identities")
     op createUserAndToken(
         @body scopes?: CreateTokenWithScopes
     ): CommunicationUserIdentifierAndToken;

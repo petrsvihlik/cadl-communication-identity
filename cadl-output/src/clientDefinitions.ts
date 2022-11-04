@@ -67,8 +67,8 @@ export interface ExchangeAccessToken {
 }
 
 export interface Routes {
-  /** Resource for '/' has methods for the following verbs: post */
-  (path: "/"): CreateUserAndToken;
+  /** Resource for '/identities' has methods for the following verbs: post */
+  (path: "/identities"): CreateUserAndToken;
   /** Resource for '/identities/\{id\}/:revokeAccessTokens' has methods for the following verbs: post */
   (path: "/identities/{id}/:revokeAccessTokens", id: object): Revoke;
   /** Resource for '/identities/\{id\}/:issueAccessToken' has methods for the following verbs: post */

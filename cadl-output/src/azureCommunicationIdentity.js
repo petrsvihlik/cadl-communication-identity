@@ -19,7 +19,7 @@ function createClient(options = {}) {
     const client = (0, core_client_1.getClient)(baseUrl, options);
     return Object.assign(Object.assign({}, client), { communicationIdentity: {
             createUserAndToken: (options) => {
-                return client.path("/").post(options);
+                return client.path("/identities").post(options);
             },
             revoke: (id, options) => {
                 return client

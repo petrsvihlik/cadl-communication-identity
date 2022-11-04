@@ -31,7 +31,7 @@ export default function createClient(
     ...client,
     communicationIdentity: {
       createUserAndToken: (options) => {
-        return client.path("/").post(options);
+        return client.path("/identities").post(options);
       },
       revoke: (id, options) => {
         return client

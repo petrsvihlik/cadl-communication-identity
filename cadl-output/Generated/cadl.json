@@ -356,7 +356,7 @@
      "HttpMethod": "POST",
      "RequestBodyMediaType": "Json",
      "Uri": "{host}",
-     "Path": "/",
+     "Path": "/identities",
      "RequestMediaTypes": [
       "application/json"
      ],
