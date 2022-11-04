@@ -1,10 +1,11 @@
-import AzureCommunicationIdentity from "./azureCommunicationIdentity";
+import ContosoWidgetManager from "./contosoWidgetManager";
 
-export * from "./azureCommunicationIdentity";
+export * from "./contosoWidgetManager";
 export * from "./parameters";
 export * from "./responses";
 export * from "./clientDefinitions";
+export * from "./isUnexpected";
 export * from "./models";
 export * from "./outputModels";
 
-export default AzureCommunicationIdentity;
+export default ContosoWidgetManager;
