@@ -30,6 +30,11 @@ npm i
 node .\test.js
 ```
 
+### Result
+![image](https://user-images.githubusercontent.com/9810625/200026942-a8a05d7a-5e87-4a7c-bfa2-a9b1c3bcb17b.png)
+
+
+
 ## Resources
 
 
