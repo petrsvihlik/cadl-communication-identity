@@ -1,0 +1,2246 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.33.5",
+    "schemaVersion": 1010,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@msinternal/acs-identity!",
+  "docComment": "",
+  "name": "@msinternal/acs-identity",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@msinternal/acs-identity!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!AccessTokenOutput:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface AccessTokenOutput "
+            }
+          ],
+          "fileUrlPath": "src/outputModels.ts",
+          "releaseTag": "Public",
+          "name": "AccessTokenOutput",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!AccessTokenOutput#expiresOn:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "expiresOn: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "expiresOn",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!AccessTokenOutput#token:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "token: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "token",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@msinternal/acs-identity!AzureCommunicationIdentityClient:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type AzureCommunicationIdentityClient = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Client",
+              "canonicalReference": "@azure-rest/core-client!Client:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & {\n    path: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Routes",
+              "canonicalReference": "@msinternal/acs-identity!Routes:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    communicationIdentity: "
+            },
+            {
+              "kind": "Reference",
+              "text": "CommunicationIdentityOperations",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityOperations:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/clientDefinitions.ts",
+          "releaseTag": "Public",
+          "name": "AzureCommunicationIdentityClient",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndToken200Response:interface",
+          "docComment": "/**\n * The request has succeeded.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationIdentityCreateUserAndToken200Response extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "HttpResponse",
+              "canonicalReference": "@azure-rest/core-client!HttpResponse:type"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/responses.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityCreateUserAndToken200Response",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndToken200Response#body:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "body: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationUserIdentifierAndTokenOutput",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationUserIdentifierAndTokenOutput:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "body",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndToken200Response#status:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "status: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"200\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "status",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndTokenBodyParam:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationIdentityCreateUserAndTokenBodyParam "
+            }
+          ],
+          "fileUrlPath": "src/parameters.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityCreateUserAndTokenBodyParam",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndTokenBodyParam#body:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "body?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CreateTokenWithScopes",
+                  "canonicalReference": "@msinternal/acs-identity!CreateTokenWithScopes:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "body",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndTokenParameters:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type CommunicationIdentityCreateUserAndTokenParameters = "
+            },
+            {
+              "kind": "Reference",
+              "text": "CommunicationIdentityCreateUserAndTokenBodyParam",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndTokenBodyParam:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "RequestParameters",
+              "canonicalReference": "@azure-rest/core-client!RequestParameters:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/parameters.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityCreateUserAndTokenParameters",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityDelete204Response:interface",
+          "docComment": "/**\n * There is no content to send for this request, but the headers may be useful.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationIdentityDelete204Response extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "HttpResponse",
+              "canonicalReference": "@azure-rest/core-client!HttpResponse:type"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/responses.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityDelete204Response",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityDelete204Response#status:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "status: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"204\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "status",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityDeleteParameters:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type CommunicationIdentityDeleteParameters = "
+            },
+            {
+              "kind": "Reference",
+              "text": "RequestParameters",
+              "canonicalReference": "@azure-rest/core-client!RequestParameters:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/parameters.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityDeleteParameters",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessToken204Response:interface",
+          "docComment": "/**\n * There is no content to send for this request, but the headers may be useful.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationIdentityExchangeAccessToken204Response extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "HttpResponse",
+              "canonicalReference": "@azure-rest/core-client!HttpResponse:type"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/responses.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityExchangeAccessToken204Response",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessToken204Response#status:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "status: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"204\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "status",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessTokenBodyParam:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationIdentityExchangeAccessTokenBodyParam "
+            }
+          ],
+          "fileUrlPath": "src/parameters.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityExchangeAccessTokenBodyParam",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessTokenBodyParam#body:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "body: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ExchangeAccessTokenRequest",
+                  "canonicalReference": "@msinternal/acs-identity!ExchangeAccessTokenRequest:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "body",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessTokenParameters:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type CommunicationIdentityExchangeAccessTokenParameters = "
+            },
+            {
+              "kind": "Reference",
+              "text": "CommunicationIdentityExchangeAccessTokenBodyParam",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessTokenBodyParam:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "RequestParameters",
+              "canonicalReference": "@azure-rest/core-client!RequestParameters:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/parameters.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityExchangeAccessTokenParameters",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityGetToken204Response:interface",
+          "docComment": "/**\n * There is no content to send for this request, but the headers may be useful.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationIdentityGetToken204Response extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "HttpResponse",
+              "canonicalReference": "@azure-rest/core-client!HttpResponse:type"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/responses.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityGetToken204Response",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityGetToken204Response#status:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "status: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"204\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "status",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityGetTokenParameters:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type CommunicationIdentityGetTokenParameters = "
+            },
+            {
+              "kind": "Reference",
+              "text": "RequestParameters",
+              "canonicalReference": "@azure-rest/core-client!RequestParameters:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/parameters.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityGetTokenParameters",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityOperations:interface",
+          "docComment": "/**\n * Contains operations for CommunicationIdentity operations\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationIdentityOperations "
+            }
+          ],
+          "fileUrlPath": "src/clientDefinitions.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityOperations",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityOperations#createUserAndToken:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "createUserAndToken(options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityCreateUserAndTokenParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndTokenParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityCreateUserAndToken200Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndToken200Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "createUserAndToken"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityOperations#delete:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "delete(id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityDeleteParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityDeleteParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityDelete204Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityDelete204Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "id",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "delete"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityOperations#exchangeAccessToken:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "exchangeAccessToken(options: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityExchangeAccessTokenParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessTokenParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityExchangeAccessToken204Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessToken204Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "exchangeAccessToken"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityOperations#getToken:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getToken(id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityGetTokenParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityGetTokenParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityGetToken204Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityGetToken204Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "id",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "getToken"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityOperations#revoke:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "revoke(id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityRevokeParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityRevokeParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityRevoke204Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityRevoke204Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "id",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "revoke"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityRevoke204Response:interface",
+          "docComment": "/**\n * There is no content to send for this request, but the headers may be useful.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationIdentityRevoke204Response extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "HttpResponse",
+              "canonicalReference": "@azure-rest/core-client!HttpResponse:type"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/responses.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityRevoke204Response",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityRevoke204Response#status:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "status: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"204\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "status",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityRevokeParameters:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type CommunicationIdentityRevokeParameters = "
+            },
+            {
+              "kind": "Reference",
+              "text": "RequestParameters",
+              "canonicalReference": "@azure-rest/core-client!RequestParameters:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/parameters.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationIdentityRevokeParameters",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationUserIdentifierAndTokenOutput:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationUserIdentifierAndTokenOutput "
+            }
+          ],
+          "fileUrlPath": "src/outputModels.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationUserIdentifierAndTokenOutput",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationUserIdentifierAndTokenOutput#token:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "token: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AccessTokenOutput",
+                  "canonicalReference": "@msinternal/acs-identity!AccessTokenOutput:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "token",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationUserIdentifierAndTokenOutput#user:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "user: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationUserIdentifierOutput",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationUserIdentifierOutput:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "user",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CommunicationUserIdentifierOutput:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommunicationUserIdentifierOutput "
+            }
+          ],
+          "fileUrlPath": "src/outputModels.ts",
+          "releaseTag": "Public",
+          "name": "CommunicationUserIdentifierOutput",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CommunicationUserIdentifierOutput#id:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "id",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@msinternal/acs-identity!createClient:function(1)",
+          "docComment": "/**\n * Initialize a new instance of the class AzureCommunicationIdentityClient class.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export default function createClient(options?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ClientOptions",
+              "canonicalReference": "@azure-rest/core-client!ClientOptions:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "AzureCommunicationIdentityClient",
+              "canonicalReference": "@msinternal/acs-identity!AzureCommunicationIdentityClient:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/azureCommunicationIdentity.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "options",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "createClient"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CreateTokenWithScopes:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CreateTokenWithScopes "
+            }
+          ],
+          "fileUrlPath": "src/models.ts",
+          "releaseTag": "Public",
+          "name": "CreateTokenWithScopes",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CreateTokenWithScopes#createTokenWithScopes:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "createTokenWithScopes?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "createTokenWithScopes",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!CreateTokenWithScopes#expiresInMinutes:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "expiresInMinutes?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "expiresInMinutes",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!CreateUserAndToken:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CreateUserAndToken "
+            }
+          ],
+          "fileUrlPath": "src/clientDefinitions.ts",
+          "releaseTag": "Public",
+          "name": "CreateUserAndToken",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!CreateUserAndToken#post:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "post(options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityCreateUserAndTokenParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndTokenParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityCreateUserAndToken200Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityCreateUserAndToken200Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "post"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!Delete:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Delete "
+            }
+          ],
+          "fileUrlPath": "src/clientDefinitions.ts",
+          "releaseTag": "Public",
+          "name": "Delete",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!Delete#post:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "post(options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityDeleteParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityDeleteParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityDelete204Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityDelete204Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "post"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!ExchangeAccessToken:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ExchangeAccessToken "
+            }
+          ],
+          "fileUrlPath": "src/clientDefinitions.ts",
+          "releaseTag": "Public",
+          "name": "ExchangeAccessToken",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!ExchangeAccessToken#post:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "post(options: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityExchangeAccessTokenParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessTokenParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityExchangeAccessToken204Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityExchangeAccessToken204Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "post"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!ExchangeAccessTokenRequest:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ExchangeAccessTokenRequest "
+            }
+          ],
+          "fileUrlPath": "src/models.ts",
+          "releaseTag": "Public",
+          "name": "ExchangeAccessTokenRequest",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!ExchangeAccessTokenRequest#appId:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "appId: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "appId",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!ExchangeAccessTokenRequest#token:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "token: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "token",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@msinternal/acs-identity!ExchangeAccessTokenRequest#userId:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "userId: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "userId",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!GetToken:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface GetToken "
+            }
+          ],
+          "fileUrlPath": "src/clientDefinitions.ts",
+          "releaseTag": "Public",
+          "name": "GetToken",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!GetToken#post:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "post(options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityGetTokenParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityGetTokenParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityGetToken204Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityGetToken204Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "post"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!Revoke:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Revoke "
+            }
+          ],
+          "fileUrlPath": "src/clientDefinitions.ts",
+          "releaseTag": "Public",
+          "name": "Revoke",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@msinternal/acs-identity!Revoke#post:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "post(options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityRevokeParameters",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityRevokeParameters:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "StreamableMethod",
+                  "canonicalReference": "@azure-rest/core-client!StreamableMethod:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CommunicationIdentityRevoke204Response",
+                  "canonicalReference": "@msinternal/acs-identity!CommunicationIdentityRevoke204Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "post"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@msinternal/acs-identity!Routes:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Routes "
+            }
+          ],
+          "fileUrlPath": "src/clientDefinitions.ts",
+          "releaseTag": "Public",
+          "name": "Routes",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@msinternal/acs-identity!Routes:call(1)",
+              "docComment": "/**\n * Resource for '/identities' has methods for the following verbs: post\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(path: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"/identities\""
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CreateUserAndToken",
+                  "canonicalReference": "@msinternal/acs-identity!CreateUserAndToken:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "path",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@msinternal/acs-identity!Routes:call(2)",
+              "docComment": "/**\n * Resource for '/identities/\\{id\\}/:revokeAccessTokens' has methods for the following verbs: post\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(path: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"/identities/{id}/:revokeAccessTokens\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ", id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Revoke",
+                  "canonicalReference": "@msinternal/acs-identity!Revoke:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 2,
+              "parameters": [
+                {
+                  "parameterName": "path",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "id",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@msinternal/acs-identity!Routes:call(3)",
+              "docComment": "/**\n * Resource for '/identities/\\{id\\}/:issueAccessToken' has methods for the following verbs: post\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(path: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"/identities/{id}/:issueAccessToken\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ", id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "GetToken",
+                  "canonicalReference": "@msinternal/acs-identity!GetToken:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 3,
+              "parameters": [
+                {
+                  "parameterName": "path",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "id",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@msinternal/acs-identity!Routes:call(4)",
+              "docComment": "/**\n * Resource for '/identities/\\{id\\}' has methods for the following verbs: post\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(path: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"/identities/{id}\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ", id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Delete",
+                  "canonicalReference": "@msinternal/acs-identity!Delete:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 4,
+              "parameters": [
+                {
+                  "parameterName": "path",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "id",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@msinternal/acs-identity!Routes:call(5)",
+              "docComment": "/**\n * Resource for '/teamsUser/:exchangeAccessToken' has methods for the following verbs: post\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(path: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"/teamsUser/:exchangeAccessToken\""
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ExchangeAccessToken",
+                  "canonicalReference": "@msinternal/acs-identity!ExchangeAccessToken:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 5,
+              "parameters": [
+                {
+                  "parameterName": "path",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        }
+      ]
+    }
+  ]
+}
