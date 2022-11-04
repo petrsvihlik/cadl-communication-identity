@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@azure-rest/core-client": "^1.0.0"
+    "@azure-rest/core-client": "^1.0.0",
+    "@azure/communication-common": "^2.2.0",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "typescript": "latest"

@@ -1,26 +1,16 @@
 import { getClient, ClientOptions } from "@azure-rest/core-client";
 import { AzureCommunicationIdentityClient } from "./clientDefinitions";
-import { KeyCredential, TokenCredential } from "@azure/core-auth";
 
 /**
  * Initialize a new instance of the class AzureCommunicationIdentityClient class.
  *
  */
-export default function createClient(Endpoint: string,
-  credentials: TokenCredential | KeyCredential,
+export default function createClient(
   options: ClientOptions = {}
 ): AzureCommunicationIdentityClient {
-  const baseUrl = options.baseUrl ?? `${Endpoint}/personalizer/v1.1-preview.3`;
-
-  options = {
-    ...options,
-    credentials: {
-      scopes: ["https://cognitiveservices.azure.com/.default"],
-      apiKeyHeaderName: "Ocp-Apim-Subscription-Key",
-    },
-  };
-
-  const userAgentInfo = `azsdk-js-ai-personalizer-rest/1.0.0-beta.1`;
+  const baseUrl = options.baseUrl ?? `https://example.com`;
+  options.apiVersion = options.apiVersion ?? "2022-10-01";
+  const userAgentInfo = `azsdk-js-acs-identity-rest/1.0.0-alpha.0`;
   const userAgentPrefix =
     options.userAgentOptions && options.userAgentOptions.userAgentPrefix
       ? `${options.userAgentOptions.userAgentPrefix} ${userAgentInfo}`
@@ -32,8 +22,33 @@ export default function createClient(Endpoint: string,
     },
   };
 
-  const client = getClient(baseUrl, credentials, options) as AzureCommunicationIdentityClient;
+  const client = getClient(
+    baseUrl,
+    options
+  ) as AzureCommunicationIdentityClient;
 
-  return client;
-
+  return {
+    ...client,
+    communicationIdentity: {
+      createUserAndToken: (options) => {
+        return client.path("/").post(options);
+      },
+      revoke: (id, options) => {
+        return client
+          .path("/identities/{id}/:revokeAccessTokens", id)
+          .post(options);
+      },
+      getToken: (id, options) => {
+        return client
+          .path("/identities/{id}/:issueAccessToken", id)
+          .post(options);
+      },
+      delete: (id, options) => {
+        return client.path("/identities/{id}", id).post(options);
+      },
+      exchangeAccessToken: (options) => {
+        return client.path("/teamsUser/:exchangeAccessToken").post(options);
+      },
+    },
+  };
 }

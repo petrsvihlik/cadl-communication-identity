@@ -14,6 +14,28 @@ import {
 } from "./responses";
 import { Client, StreamableMethod } from "@azure-rest/core-client";
 
+/** Contains operations for CommunicationIdentity operations */
+export interface CommunicationIdentityOperations {
+  createUserAndToken(
+    options?: CommunicationIdentityCreateUserAndTokenParameters
+  ): StreamableMethod<CommunicationIdentityCreateUserAndToken200Response>;
+  revoke(
+    id: object,
+    options?: CommunicationIdentityRevokeParameters
+  ): StreamableMethod<CommunicationIdentityRevoke204Response>;
+  getToken(
+    id: object,
+    options?: CommunicationIdentityGetTokenParameters
+  ): StreamableMethod<CommunicationIdentityGetToken204Response>;
+  delete(
+    id: object,
+    options?: CommunicationIdentityDeleteParameters
+  ): StreamableMethod<CommunicationIdentityDelete204Response>;
+  exchangeAccessToken(
+    options: CommunicationIdentityExchangeAccessTokenParameters
+  ): StreamableMethod<CommunicationIdentityExchangeAccessToken204Response>;
+}
+
 export interface CreateUserAndToken {
   post(
     options?: CommunicationIdentityCreateUserAndTokenParameters
@@ -59,4 +81,5 @@ export interface Routes {
 
 export type AzureCommunicationIdentityClient = Client & {
   path: Routes;
+  communicationIdentity: CommunicationIdentityOperations;
 };
